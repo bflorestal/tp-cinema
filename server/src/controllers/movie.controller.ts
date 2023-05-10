@@ -43,6 +43,18 @@ export async function createMovie(req: Request, res: Response) {
   }
 }
 
+export async function updateMovie(req: Request, res: Response) {
+  try {
+    return res.status(501).json({ message: "Non implémenté" });
+  } catch (err) {
+    if (err instanceof Error) console.error(`${err.name}: ${err.message}`);
+
+    return res
+      .status(500)
+      .json({ message: "Impossible de mettre à jour le film" });
+  }
+}
+
 export async function deleteMovie(req: Request, res: Response) {
   try {
     const movie = await Movie.findByIdAndDelete(req.params.id);

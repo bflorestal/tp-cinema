@@ -4,7 +4,7 @@ import {
   getAllMovies,
   getMovieById,
   createMovie,
-  //   updateMovie,
+  updateMovie,
   deleteMovie,
 } from "../controllers/movie.controller";
 
@@ -14,7 +14,7 @@ router
   .get("/movies", getAllMovies)
   .get("/movies/:id", getMovieById)
   .post("/movies", createMovie)
-  //   .put("/movies/:id", updateMovie)
+  .put("/movies/:id", updateMovie)
   .delete("/movies/:id", deleteMovie);
 
 export { router as movieRouter };
