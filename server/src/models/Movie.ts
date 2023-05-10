@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-interface IMovie {
+export interface IMovie {
   title: string;
   synopsis: string;
   posterUrl: string;
