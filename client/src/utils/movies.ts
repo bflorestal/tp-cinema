@@ -8,7 +8,7 @@ interface MovieWithId extends Movie {
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-export async function getAllMovie() {
+export async function getAllMovies() {
   try {
     const res = await fetch(`${API_URL}/movies`);
     const data = await res.json();
