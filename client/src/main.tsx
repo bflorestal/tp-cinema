@@ -5,6 +5,7 @@ import "./index.css";
 
 import Home from "./pages/Home.tsx";
 import Movies from "./pages/Movies.tsx";
+import AddMoviePage from "./pages/AddMovie.tsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,14 @@ const router = createBrowserRouter([
     path: "/movies",
     element: <Movies />,
   },
+  {
+    path: "/movies/add",
+    element: <AddMoviePage />,
+  },
+  /* {
+    path: "/movies/:id",
+    element: <MoviePage />
+  } */
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

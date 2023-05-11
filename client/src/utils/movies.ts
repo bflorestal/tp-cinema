@@ -6,6 +6,10 @@ export interface MovieWithId extends Movie {
   __v: number;
 }
 
+export interface MovieInput extends Omit<Movie, "releaseDate"> {
+  releaseDate: string;
+}
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 export async function getAllMovies() {
@@ -34,7 +38,7 @@ export async function getMovieById(id: number) {
   }
 }
 
-export async function createMovie(movie: Movie) {
+export async function createMovie(movie: MovieInput) {
   try {
     const res = await fetch(`${API_URL}/movies`, {
       method: "POST",
