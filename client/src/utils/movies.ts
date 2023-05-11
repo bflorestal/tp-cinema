@@ -25,7 +25,7 @@ export async function getAllMovies() {
   }
 }
 
-export async function getMovieById(id: number) {
+export async function getMovieById(id: string) {
   try {
     const res = await fetch(`${API_URL}/movies/${id}`);
     const data = await res.json();
@@ -55,7 +55,7 @@ export async function createMovie(movie: MovieInput) {
   }
 }
 
-export async function updateMovie(id: number, movie: Movie) {
+export async function updateMovie(id: string, movie: Movie) {
   try {
     const res = await fetch(`${API_URL}/movies/${id}`, {
       method: "PUT",
@@ -72,7 +72,7 @@ export async function updateMovie(id: number, movie: Movie) {
   }
 }
 
-export async function deleteMovie(id: number) {
+export async function deleteMovie(id: string) {
   try {
     const res = await fetch(`${API_URL}/movies/${id}`, {
       method: "DELETE",
