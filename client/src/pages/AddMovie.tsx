@@ -2,28 +2,7 @@ import { useState } from "react";
 import Layout from "../components/Layout";
 import { useNavigate } from "react-router-dom";
 
-import { createMovie, type MovieInput } from "../utils/movies";
-
-const genres = [
-  "Action",
-  "Adventure",
-  "Comedy",
-  "Drama",
-  "Ecchi",
-  "Fantasy",
-  "Horror",
-  "Mahou Shoujo",
-  "Mecha",
-  "Music",
-  "Mystery",
-  "Psychological",
-  "Romance",
-  "Sci-Fi",
-  "Slice of Life",
-  "Sports",
-  "Supernatural",
-  "Thriller",
-] as const;
+import { createMovie, genres, type MovieInput } from "../utils/movies";
 
 export default function AddMoviePage() {
   const [movie, setMovie] = useState<MovieInput>({

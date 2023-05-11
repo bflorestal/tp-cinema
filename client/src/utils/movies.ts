@@ -10,6 +10,27 @@ export interface MovieInput extends Omit<Movie, "releaseDate"> {
   releaseDate: string;
 }
 
+export const genres = [
+  "Action",
+  "Adventure",
+  "Comedy",
+  "Drama",
+  "Ecchi",
+  "Fantasy",
+  "Horror",
+  "Mahou Shoujo",
+  "Mecha",
+  "Music",
+  "Mystery",
+  "Psychological",
+  "Romance",
+  "Sci-Fi",
+  "Slice of Life",
+  "Sports",
+  "Supernatural",
+  "Thriller",
+] as const;
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 export async function getAllMovies() {

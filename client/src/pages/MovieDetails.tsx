@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import { type MovieWithId, getMovieById, deleteMovie } from "../utils/movies";
 
 import { LoadingSpinner } from "../components/Loading";
-// import { UpdateMovieModal } from "../components/Modal";
+import { UpdateMovieModal } from "../components/Modal";
 
 export default function MoviePage() {
   const [movie, setMovie] = useState<MovieWithId | null>(null);
@@ -88,9 +88,7 @@ export default function MoviePage() {
                 </div>
               </div>
             </div>
-
-            {/* Modale */}
-            {/* <UpdateMovieModal id="my-modal-3" /> */}
+            <UpdateMovieModal id="my-modal-3" movie={movie} />
           </>
         )}
       </section>
