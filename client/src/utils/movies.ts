@@ -1,7 +1,7 @@
 // Import du type défini dans le serveur
 import type { IMovie as Movie } from "../../../server/src/models/Movie";
 
-interface MovieWithId extends Movie {
+export interface MovieWithId extends Movie {
   _id: string;
   __v: number;
 }
