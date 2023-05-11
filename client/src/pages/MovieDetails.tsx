@@ -79,7 +79,7 @@ export default function MoviePage() {
                   <p>{movie.duration} minutes</p>
                 </div>
                 <div className="flex gap-x-4">
-                  <label htmlFor="my-modal-3" className="btn btn-accent">
+                  <label htmlFor="my-modal-3" className="btn btn-primary">
                     Modifier
                   </label>
                   <button onClick={handleDelete} className="btn btn-error">
